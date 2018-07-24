@@ -9,13 +9,16 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController{
+
+    
+    
     let clock = Clock()
     var timer: Timer?
     
    //create time label
-    @IBOutlet weak var timeLabel: UILabel!
+//    @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var clockLabel: UILabel!
     
@@ -24,12 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        getCurrentTime()
+//        getCurrentTime()
         getCurrentClockTime()
         
         //code below constantly updates the clock label... see clock label at work in get current clock time func
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimeLabel), userInfo: nil, repeats: true)
+        
+        
     }
     //view did appear should update time
         override func viewWillAppear(_ animated: Bool) {
@@ -44,14 +49,14 @@ class ViewController: UIViewController {
     //NSDate and NSDateFormatter ??
     
     //create a function that fetches the current time & keeps running
-    func getCurrentTime(){
-        let formatter = DateFormatter()
-        formatter.dateStyle =
-            .none
-        formatter.timeStyle = .medium
-        let str = formatter.string(from: Date())
-        timeLabel.text = str
-    }
+//    func getCurrentTime(){
+//        let formatter = DateFormatter()
+//        formatter.dateStyle =
+//            .none
+//        formatter.timeStyle = .medium
+//        let str = formatter.string(from: Date())
+//        timeLabel.text = str
+//    }
     
     func getCurrentClockTime() {
         let formatter = DateFormatter()
@@ -62,6 +67,7 @@ class ViewController: UIViewController {
     @objc func updateTimeLabel() {
         let formatter = DateFormatter()
         formatter.timeStyle = .medium
+        clockLabel.font = UIFont(name:"Marker Felt", size: 60.0)
         clockLabel.text = formatter.string(from: clock.currentTime() as Date)
     }
 }

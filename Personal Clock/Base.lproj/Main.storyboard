@@ -18,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s03-5M-AKm">
-                                <rect key="frame" x="147.5" y="313" width="80.5" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roT-Vp-NJq">
-                                <rect key="frame" x="0.0" y="172" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="348" width="375" height="47"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,11 +27,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s03-5M-AKm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1pK-Ra-bng"/>
-                            <constraint firstItem="s03-5M-AKm" firstAttribute="top" secondItem="roT-Vp-NJq" secondAttribute="bottom" constant="94" id="3FZ-zk-dVh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="roT-Vp-NJq" secondAttribute="trailing" id="76G-kd-3qd"/>
-                            <constraint firstItem="s03-5M-AKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAW-8a-GG9"/>
-                            <constraint firstItem="roT-Vp-NJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="lfi-Hb-t6k"/>
+                            <constraint firstItem="roT-Vp-NJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="284" id="lfi-Hb-t6k"/>
                             <constraint firstItem="roT-Vp-NJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ynE-Nd-U2t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,7 +36,6 @@
                     <navigationItem key="navigationItem" id="kY6-Oq-o2P"/>
                     <connections>
                         <outlet property="clockLabel" destination="roT-Vp-NJq" id="eU2-cN-3Fc"/>
-                        <outlet property="timeLabel" destination="s03-5M-AKm" id="axM-PI-8Fc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,6 +48,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Oj8-fQ-d1g" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6U3-3J-gfw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
